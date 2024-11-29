@@ -1,0 +1,221 @@
+/* Challenge by Frontend Mentor.
+Coded by Ericsson Mura (https://www.frontendmentor.io/profile/ericssonmura). */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/Fraunces_72pt-Bold.ttf') format('truetype');
+}
+
+:root {
+  --pr-dark-cyan: hsl(158, 36%, 37%);
+  --pr-cream: hsl(30, 38%, 92%);
+
+  --neu-very-dark-blue: hsl(212, 21%, 14%);
+  --neu-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neu-white: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--pr-cream);
+  color: var(--neu-very-dark-blue);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h1, h2 {
+  margin-block-start: 0;
+}
+
+img {
+  inline-size: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30rem;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding-inline: 1.25em;
+}
+ 
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 21.4375rem;
+  /* min-width: 20rem; */
+}
+
+.card {
+  padding: 1.5em;
+  background-color: var(--neu-white);
+}
+
+.card h1 {
+  margin-block-end: 1rem;
+  font-family: 'Fraunces', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card h2 {
+  margin-block-end: 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--neu-dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.card__description {
+  margin-block-end: 1.5rem;
+  color: var(--neu-dark-grayish-blue);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.card__prices {
+  margin-block-end: 1.25rem;
+  display: flex;
+  align-items: center;
+  font-family: 'Fraunces', sans-serif;
+}
+
+.card__price--discounted {
+  color: var(--pr-dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card__price--old {
+  margin-left: 1.25rem;
+  color: var(--neu-dark-grayish-blue);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.button {
+  width: 100%;
+  margin-block-start: 0.375rem; /*/ */
+  padding-block: 0.875em;
+  color: var(--neu-white);
+  background-color: var(--pr-dark-cyan);
+  font: 600 0.875rem 'Montserrat', sans-serif;
+  line-height: 1.6;
+  height: 3rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover,
+.buton:active {
+  background-color: var(--neu-very-dark-blue);
+}
+
+.icon {
+  /* width: 1em; */
+  display: inline;
+  margin-inline-end: 0.625em;
+  position: relative;
+  top: 0.3em;
+}
+
+.footer {
+  display: none;
+}
+
+
+/* MEDIA QUERIES  */
+@media screen and (min-width: 38.75em) {
+  .card-wrapper {
+    flex-direction: row;
+    width: 37.5rem;
+  }
+
+  .card-heading {
+    flex-basis: 18.75rem;
+  }
+
+  .card {
+    padding: 2rem;
+    flex: 1;
+  }
+
+  .card h1 {
+    margin-block-end: 1.5rem;
+  }
+
+  .card h2 {
+    margin-block-end: 1.25rem;
+  }
+
+  .card__description {
+    margin-block-end: 1.875rem;
+  }
+
+  .card__prices {
+    margin-block-end: 1.75rem;
+  }
+}
+
+

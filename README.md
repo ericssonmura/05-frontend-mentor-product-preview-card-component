@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/ericssonmura/frontend-mentor-product-preview-card-component)
-- Live Site URL: (https://ericssonmura.github.io/frontend-mentor-product-preview-card-component/)
+- Solution URL: (https://github.com/ericssonmura/05-frontend-mentor-product-preview-card-component)
+- Live Site URL: (https://ericssonmura.github.io/05-frontend-mentor-product-preview-card-component/)
 
 ## My process
 
